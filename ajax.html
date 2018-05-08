@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src='./jqeury.js'></script>
+    <script type="text/javascript">
+      var url = 'http:127.0.0.2:8000';
+      var data = {
+        id: 233,
+        title: 'nodejs处理客户端发送的post请求',
+        content: '代码如下...',
+        date: '2018-05-06'
+      }
+      $.ajax({
+        type: 'POST',
+        url: url,
+        data: JSON.stringify(data),
+        success: function(d){
+          console.log(d);
+        }
+      })
+    </script>
+  </body>
+</html>
